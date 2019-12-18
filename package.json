@@ -1,5 +1,5 @@
 {
-  "name": "ppr",
+  "name": "cure-demo",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -13,6 +13,9 @@
   },
   "private": true,
   "dependencies": {
+"typescript": "~3.5.3",
+"@angular/cli": "^8.3.20",
+    "@angular/compiler-cli": "^8.2.14",
     "@angular-devkit/schematics": "^8.3.6",
     "@angular/animations": "^8.2.8",
     "@angular/cdk": "^8.2.1",
