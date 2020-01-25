@@ -32,6 +32,7 @@ import { AppState } from "./app-state";
 // import { IntroPageComponent } from "./components/intro-page/intro-page.component";
 // import { PreferencesDialogComponent } from "./components/preferences-dialog/preferences-dialog.component";
 import { DemoComponent } from "./components/demo/demo.component";
+import { HomeComponent } from './components/home/home.component';
 // import { DemoComponent } from './components/demo/demo.component';
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { DemoComponent } from "./components/demo/demo.component";
     // EditProjectDialogComponent,
     // IntroPageComponent,
     // PreferencesDialogComponent,
-    DemoComponent
+    DemoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

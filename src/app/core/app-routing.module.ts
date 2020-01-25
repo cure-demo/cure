@@ -1,6 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { DemoComponent } from "../components/demo/demo.component";
+import { HomeComponent } from "../components/home/home.component";
+
 
 const routes: Routes = [
   // { path: "", component: IntroPageComponent },
@@ -8,7 +10,7 @@ const routes: Routes = [
   // { path: "register", component: RegisterComponent },
   // { path: "home", component: HomePageComponent }
   { path: "demo", component: DemoComponent },
-  { path: "", component: DemoComponent }
+  { path: "home", component: HomeComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

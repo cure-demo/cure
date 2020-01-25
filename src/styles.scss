@@ -12,7 +12,10 @@ body {
   font-family: "Open Sans", "Helvetica Neue", sans-serif, "Source Sans Pro";
 }
 body {
-   background-color: beige !important;
+background: #219B90;
+// background: -webkit-linear-gradient(top left, #219B90, #281BED);
+// background: -moz-linear-gradient(top left, #219B90, #281BED);
+// background: linear-gradient(to bottom right, #219B90, #281BED); 
   overflow-x: hidden;
 }
 .input-style {
