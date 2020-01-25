@@ -10,7 +10,7 @@ const routes: Routes = [
   // { path: "register", component: RegisterComponent },
   // { path: "home", component: HomePageComponent }
   { path: "demo", component: DemoComponent },
-  { path: "home", component: HomeComponent }
+  { path: "", component: HomeComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
