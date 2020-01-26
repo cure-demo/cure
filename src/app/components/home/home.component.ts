@@ -78,4 +78,7 @@ export class HomeComponent implements OnInit {
     });
 
   }
+  openModal(item) {
+    console.log('gg', item);
+  }
 }
