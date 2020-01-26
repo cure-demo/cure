@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  app_env: "dev",
-  environmentUrl: "http://18.189.170.84/",
-  stripePublicKey: "pk_test_tQlHC8LOUlXdT1ZQDIaQJfJp00HViFTxbE"
+  app_env: 'dev',
+  environmentUrl: 'https://kidney-project.herokuapp.com/',
+  // stripePublicKey: "pk_test_tQlHC8LOUlXdT1ZQDIaQJfJp00HViFTxbE"
 };
 
 /*

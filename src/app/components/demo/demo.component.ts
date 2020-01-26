@@ -55,7 +55,7 @@ export class DemoComponent implements OnInit {
     } else if (formValues.input11 == null) {
     } else if (formValues.input12 == null) {
     } else {
-      document.getElementById("showBlock").style.display = "block";
+      document.getElementById('showBlock').style.display = 'block';
     }
   }
 }

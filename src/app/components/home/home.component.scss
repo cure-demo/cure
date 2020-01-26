@@ -1,56 +1,90 @@
-.tile:hover{
-    -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari 3-8 */
-    transform: scale(1.2); 
+.tile:hover {
+    -ms-transform: scale(1.2);
+    /* IE 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+    transform: scale(1.2);
     box-shadow: 0px 0px 60px 0 rgba(147, 126, 217, 0.71) !important;
 }
 
-.tile{
+.tile {
     height: 159px;
-        border-radius: 15px;
-        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.16);
-        background-color: #ffffff;margin-bottom: 50px !important;
-        margin: 0px 50px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    margin-bottom: 50px !important;
+    margin: 0px 50px;
 }
 
-.box-style{
+.box-style {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     padding-top: 100px;
 }
-.cure-title{
+
+.cure-title {
     font-family: Poppins;
-        font-size: 110px;
+    font-size: 110px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.51;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto
+}
+
+input[type=text],
+textarea {
+    -webkit-transition: all 0.30s ease-in-out !important;
+    -moz-transition: all 0.30s ease-in-out !important;
+    -ms-transition: all 0.30s ease-in-out !important!important;
+    -o-transition: all 0.30s ease-in-out !important;
+    outline: none !important;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    padding-left: 15px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+}
+
+input[type=text]:focus,
+textarea:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1) !important;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(81, 203, 238, 1) !important;
+    padding-left: 15px;
+}
+
+// responsive
+@media only screen and (max-width: 440px) {
+    .box-style {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .cure-title {
+        font-family: Poppins;
+        font-size: 87px;
         font-weight: 300;
         font-stretch: normal;
         font-style: normal;
         line-height: 1.51;
         letter-spacing: normal;
         text-align: left;
-        color: #ffffff;margin-left: auto;margin-right: auto
-}
-
-
-// responsive
-
-@media only screen and (max-width: 440px) {
-    .box-style{
+        color: #ffffff;
         margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        padding-top: 50px;
+        margin-right: auto
     }
-    
-    .cure-title{
-        font-family: Poppins;
-            font-size: 87px;
-            font-weight: 300;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.51;
-            letter-spacing: normal;
-            text-align: left;
-            color: #ffffff;margin-left: auto;margin-right: auto
-    }
-  }
+}
