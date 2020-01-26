@@ -82,7 +82,7 @@ export class AdminService {
       })
     };
     return this.http
-      .post<User>(this.globalService.modalurl , payload, httpOptions)
+      .post<User>(this.globalService.modalurl , payload)
       .pipe();
   }
 }
