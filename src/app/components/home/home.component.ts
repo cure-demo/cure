@@ -26,7 +26,19 @@ export class HomeComponent implements OnInit {
       sod: [],
       rbc: [],
       bgr: [],
-      wc: []
+      wc: [],
+      bp: [],
+      al: [],
+      pot: [],
+      pcv: [],
+      hemo: [],
+      rc: [],
+      htn: [],
+      dm: [],
+      cad: [],
+      appet: [],
+      pe: [],
+      ane: []
     });
   }
   SubmitForm(formValues: {
@@ -42,43 +54,71 @@ export class HomeComponent implements OnInit {
     rbc: string;
     bgr: string;
     wc: string;
+    bp: string;
+    al: string;
+    pot: string;
+    pcv: string;
+    hemo: string;
+    rc: string;
+    htn: string;
+    dm: string;
+    cad: string;
+    appet: string;
+    pe: string;
+    ane: string;
   }) {
     console.log(formValues);
 
 
-    let payload = {
+    const payload = {
       age: 48,
-      bp: 80
-      , sg: 1.02
-      , al: 1
-      , su: 0
-      , rbc: 0
-      , pc: 0
-      , pcc: 0
-      , ba: 0
-      , bgr: 121
-      , bu: 36
-      , sc: 1.2
-      , sod: 0
-      , pot: 0
-      , hemo: 15.4
-      , pcv: 44
-      , wc: 7800
-      , rc: 5.2
-      , htn: 1
-      , dm: 1
-      , cad: 0
-      , appet: 1
-      , pe: 0
-      , ane: 0
+      bp: 80,
+      sg: 1.02,
+      al: 1,
+      su: 0,
+      rbc: 0,
+      pc: 0,
+      pcc: 0,
+      ba: 0,
+      bgr: 121,
+      bu: 36,
+      sc: 1.2,
+      sod: 0,
+      pot: 0,
+      hemo: 15.4,
+      pcv: 44,
+      wc: 7800,
+      rc: 5.2,
+      htn: 1,
+      dm: 1,
+      cad: 0,
+      appet: 1,
+      pe: 0,
+      ane: 0
 
     };
-    this.adminService.getckd(payload).subscribe(data => {
-    console.log('ffff');
+    this.adminService.getckd(formValues).subscribe(data => {
+      console.log(data.results.results);
+      if (data.results.results === 1) {
+        document.getElementById('result_block').style.display = 'flex';
+        document.getElementById('cdk_status').innerText = 'Found';
+        window.scrollTo(0, document.body.scrollHeight);
+
+      }
+      if (data.results.results === 0) {
+        document.getElementById('result_block').style.display = 'flex';
+        document.getElementById('cdk_status').innerText = 'Not Found';
+        document.getElementById('cdk_status').style.color = 'green';
+        window.scrollTo(0, document.body.scrollHeight);
+
+      }
     });
 
   }
   openModal(item) {
     console.log('gg', item);
+    if (item === 'ckg') {
+      document.getElementById('cdk_block').style.display = 'flex';
+    }
   }
 }

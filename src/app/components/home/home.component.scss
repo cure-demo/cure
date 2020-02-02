@@ -37,7 +37,7 @@
     margin-right: auto
 }
 
-input[type=text],
+input[type=number],
 textarea {
     -webkit-transition: all 0.30s ease-in-out !important;
     -moz-transition: all 0.30s ease-in-out !important;
@@ -57,13 +57,61 @@ textarea {
     letter-spacing: normal;
 }
 
-input[type=text]:focus,
+input[type=number]:focus,
 textarea:focus {
     box-shadow: 0 0 5px rgba(81, 203, 238, 1) !important;
     padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
     border: 1px solid rgba(81, 203, 238, 1) !important;
     padding-left: 15px;
+}
+
+.submit-btn-style {
+    width: 70px;
+    height: 70px;
+    box-shadow: 9px 11px 18px 0 rgba(0, 0, 0, 0.16);
+    background-image: linear-gradient(144deg, #d8ec4d 20%, #a8b92e 91%);
+    border-color: #a8b92e !important;
+    border-radius: 50px;
+    outline: none !important;
+    border: #a8b92e;
+}
+
+.header-label {
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #5d5d5d;
+    margin-top: 65px;
+}
+
+.status-text-style {
+    font-family: Poppins;
+    font-size: 27px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1d1515;
+}
+
+.cdk-title-style {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #5d5d5d;
 }
 
 // responsive

@@ -4,7 +4,7 @@
     </div>
 
     <!-- Blocks -->
-    <div class="col-md-12 col-sm-12 justify-content-center row ml-auto mr-auto" style="    padding-top: 80px;">
+    <div class="col-md-12 col-sm-12 justify-content-center row ml-auto mr-auto" style="padding-top: 80px;margin-bottom: 70px;">
         <div class="align-content-center col-md-2 col-sm-12 justify-content-center row tile" (click)="openModal('ckg')">
             <img src="../../../assets/images/ckd.png" style="height: 100px">
         </div>
@@ -17,80 +17,118 @@
     </div>
 
     <!-- Form -->
-    <div class="col-md-12 col-sm-12 justify-content-center row ml-auto mr-auto">
+    <div class="col-md-12 col-sm-12 justify-content-center row ml-auto mr-auto" id="cdk_block" style="display: none;">
 
         <div style=" width: 1361px;
         border-radius: 16px;
         border: solid 1px #707070;
         background-color: #ffffff;">
-            <form [formGroup]="demoForm" ngNativeValidate (keydown.enter)="$event.preventDefault()"> <label style="
-        font-family: Poppins;
-        font-size: 32px;
-        font-weight: 500;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.5;
-        letter-spacing: normal;
-        text-align: left;
-        color: #5d5d5d;
-        margin-top: 65px;" class="col-md-12 text-center">Chronic Kidney disease </label>
+            <form [formGroup]="demoForm" ngNativeValidate (keydown.enter)="$event.preventDefault()">
+                <label class="col-md-12 text-center header-label">Chronic Kidney disease </label>
 
                 <div class="col-md-12 col-sm-12 justify-content-around ml-auto pl-5 row" style="margin-top: 40px;">
                     <div class="col-sm-6 col-md-3">
-                        <input type="text" placeholder="AGE" formControlName="age" required/>
+                        <input type="number" placeholder="AGE" formControlName="age" required/>
                     </div>
                     <div class="col-sm-6 col-md-3">
-                        <input type="text" placeholder="PC" formControlName="pc" required/>
+                        <input type="number" placeholder="PC" formControlName="pc" required/>
                     </div>
                     <div class="col-sm-6 col-md-3">
-                        <input type="text" placeholder="BU" formControlName="bu" required/>
+                        <input type="number" placeholder="BU" formControlName="bu" required/>
                     </div>
                 </div>
 
 
                 <div class="col-md-12 col-sm-12 justify-content-around ml-auto pl-5 row" style="margin-top: 40px;">
                     <div class="col-sm-6 col-md-3">
-                        <input type="text" placeholder="SG" formControlName="sg" required/>
+                        <input type="number" placeholder="SG" formControlName="sg" required/>
                     </div>
                     <div class="col-sm-6 col-md-3">
-                        <input type="text" placeholder="PCC" formControlName="pcc" required/>
+                        <input type="number" placeholder="PCC" formControlName="pcc" required/>
                     </div>
                     <div class="col-sm-6 col-md-3">
-                        <input type="text" placeholder="SC" formControlName="sc" required/>
-                    </div>
-                </div>
-
-
-                <div class="col-md-12 col-sm-12 justify-content-around ml-auto pl-5 row" style="margin-top: 40px;">
-                    <div class="col-sm-6 col-md-3">
-                        <input type="text" placeholder="SU" formControlName="su" required />
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <input type="text" placeholder="BA" formControlName="ba" required/>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <input type="text" placeholder="SOD" formControlName="sod" required/>
+                        <input type="number" placeholder="SC" formControlName="sc" required/>
                     </div>
                 </div>
 
 
                 <div class="col-md-12 col-sm-12 justify-content-around ml-auto pl-5 row" style="margin-top: 40px;">
                     <div class="col-sm-6 col-md-3">
-                        <input type="text" placeholder="RBC" formControlName="rbc" required/>
+                        <input type="number" placeholder="SU" formControlName="su" required />
                     </div>
                     <div class="col-sm-6 col-md-3">
-                        <input type="text" placeholder="BGR" formControlName="bgr" required/>
+                        <input type="number" placeholder="BA" formControlName="ba" required/>
                     </div>
                     <div class="col-sm-6 col-md-3">
-                        <input type="text" placeholder="WC" formControlName="wc" required/>
+                        <input type="number" placeholder="SOD" formControlName="sod" required/>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12 col-sm-12 justify-content-around ml-auto pl-5 row" style="margin-top: 40px;">
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="RBC" formControlName="rbc" required/>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="BGR" formControlName="bgr" required/>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="WC" formControlName="wc" required/>
+                    </div>
+                </div>
+
+
+                <div class="col-md-12 col-sm-12 justify-content-around ml-auto pl-5 row" style="margin-top: 40px;">
+                    <!-- extra 1 -->
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="pe" formControlName="pe" required />
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="bp" formControlName="bp" required/>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="al" formControlName="al" required/>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12 justify-content-around ml-auto pl-5 row" style="margin-top: 40px;">
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="pot" formControlName="pot" required />
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="pcv " formControlName="pcv" required/>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="hemo" formControlName="hemo" required/>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12 justify-content-around ml-auto pl-5 row" style="margin-top: 40px;">
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="rc" formControlName="rc" required />
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="htn" formControlName="htn" required/>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="dm" formControlName="dm" required/>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12 justify-content-around ml-auto pl-5 row" style="margin-top: 40px;">
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="cad" formControlName="cad" required />
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="appet" formControlName="appet" required/>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <input type="number" placeholder="ane" formControlName="ane" required/>
                     </div>
                 </div>
 
                 <div class="col-md-12 justify-content-center row text-center" style="margin-top: 60px;">
-                    <button style=" width: 70px;
-                height: 70px;
-                box-shadow: 9px 11px 18px 0 rgba(0, 0, 0, 0.16);
-                background-image: linear-gradient(144deg, #d8ec4d 20%, #a8b92e 91%);border-radius: 50px;" class="align-content-center justify-content-center row " type="submit" (click)="SubmitForm(demoForm.value)">
+                    <button class="submit-btn-style align-content-center justify-content-center row " type="submit" (click)="SubmitForm(demoForm.value)">
                         <i class="fa fa-check" aria-hidden="true" style="font-size: xx-large;
                     color: white;"></i>
                     </button>
@@ -101,4 +139,26 @@
 
     </div>
 
+    <div class="col-md-12 col-sm-12 justify-content-center row ml-auto mr-auto" id="result_block" style="display: none;">
+        <div class="row" style=" width: 1361px;
+        border-radius: 21px;
+        border: solid 1px #707070;
+        background-color: #ffffff;padding:50px 35px;">
+            <div class="col-md-4 col-sm-4" style="    border: 1px solid #707070;
+            border-left-width: 0px;
+            border-top-width: 0;
+            border-bottom-width: 0px;">
+                <img src="../../../assets/images/ckd.png" class="ml-5" style="height: 100px;">
+            </div>
+            <div class="align-content-center col-md-6 col-sm-6 justify-content-center m-auto">
+                <span class="cdk-title-style">
+                Chronic Kidney disease
+            </span>
+                <br />
+                <span class="status-text-style" id=cdk_status>
+                
+            </span>
+            </div>
+        </div>
+    </div>
 </div>
