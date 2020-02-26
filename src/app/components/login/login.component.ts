@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   email: any;
   password: any;
   ngOnInit() {
+    
   }
   login() {
     this.email = document.getElementById('email').value;
