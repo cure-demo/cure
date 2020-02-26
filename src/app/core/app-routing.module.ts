@@ -11,11 +11,11 @@ const routes: Routes = [
   // { path: "login", component: LoginPageComponent },
   // { path: "register", component: RegisterComponent },
   // { path: "home", component: HomePageComponent }
-  { path: "demo", component: DemoComponent },
-  { path: "", component: HomeComponent },
-  { path: "login", component: LoginComponent },
-  { path: "signup", component: SignupComponent }
-  
+  // { path: 'demo', component: DemoComponent },
+  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'home', component: HomeComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
