@@ -17,12 +17,12 @@ export class SignupComponent implements OnInit {
   password:any
   ngOnInit() {}
   signup() {
-    this.email = document.getElementById("email").value;
-    this.password = document.getElementById("password").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
     // fun call
     console.log(this.email, this.password);
-    firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
+    firebase.auth().createUserWithEmailAndPassword(email, password).then(
       (user) => {
         // this.router.navigate("home")
         console.log(user);
