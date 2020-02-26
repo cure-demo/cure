@@ -28,4 +28,7 @@ export class LoginComponent implements OnInit {
       }
     );
   }
+  navigateToSignup() {
+    window.location.href = 'signup';
+  }
 }
