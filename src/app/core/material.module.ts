@@ -46,7 +46,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatNativeDateModule,
     MatRippleModule,
     NgxMaterialTimepickerModule,
-    MatSortModule
+    MatSortModule,
   ],
 })
 export class CustomMaterialModule { }

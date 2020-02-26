@@ -17,9 +17,9 @@ export class AdminService {
     private http: HttpClient,
     public state: AppState
   ) {
-    if (JSON.parse(localStorage.getItem("user"))) {
-      this.token = JSON.parse(localStorage.getItem("user")).key;
-    }
+    // if (JSON.parse(localStorage.getItem("user"))) {
+    //   this.token = JSON.parse(localStorage.getItem("user")).key;
+    // }
     // this.getUserToken();
     // console.log(JSON.parse(localStorage.getItem("user")));
     // this.token = 346;

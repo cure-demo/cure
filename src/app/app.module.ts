@@ -4,10 +4,6 @@ import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "./core/app-routing.module";
-// import { RegisterComponent } from "./components/register/register.component";
-// import { LoginPageComponent } from "./components/login-page/login-page.component";
-// import { HomePageComponent } from "./components/home-page/home-page.component";
-// import { ForgotDialogComponent } from "./components/forgot-dialog/forgot-dialog.component";
 import { AngularFontAwesomeModule } from "angular-font-awesome";
 
 import { FlexLayoutModule } from "@angular/flex-layout";
@@ -19,40 +15,37 @@ import { MatDialogModule, MatSelectModule } from "@angular/material";
 import { MDBBootstrapModule } from "angular-bootstrap-md";
 import { HttpClientModule } from "@angular/common/http";
 import { MatCheckboxModule } from "@angular/material/checkbox";
-// import { MenuService } from "./core/menu.service";
-// import { LogoHeaderComponent } from "./components/template/logo-header/logo-header.component";
-// import { AddProjectDialogComponent } from "./components/add-project-dialog/add-project-dialog.component";
-// import { AddContactDialogComponent } from "./components/add-contact-dialog/add-contact-dialog.component";
-// import { AddPhaseDialogComponent } from "./components/add-phase-dialog/add-phase-dialog.component";
+
 import { GlobalService } from "./app.service";
-// import { EditContactDialogComponent } from "./components/edit-contact-dialog/edit-contact-dialog.component";
-// import { EditPhaseDialogComponent } from "./components/edit-phase-dialog/edit-phase-dialog.component";
-// import { EditProjectDialogComponent } from "./components/edit-project-dialog/edit-project-dialog.component";
+
 import { AppState } from "./app-state";
-// import { IntroPageComponent } from "./components/intro-page/intro-page.component";
-// import { PreferencesDialogComponent } from "./components/preferences-dialog/preferences-dialog.component";
 import { DemoComponent } from "./components/demo/demo.component";
-import { HomeComponent } from './components/home/home.component';
-// import { DemoComponent } from './components/demo/demo.component';
+import { HomeComponent } from "./components/home/home.component";
+
+// firebase
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { environment } from "../environments/environment";
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import * as firebase from 'firebase/app';
+
+ var firebaseConfig = {
+    apiKey: "AIzaSyB0O1KQS-yX_j1xfXxQGNtx5mPfaGlKzMA",
+    authDomain: "cure-demo.firebaseapp.com",
+    databaseURL: "https://cure-demo.firebaseio.com",
+    projectId: "cure-demo",
+    storageBucket: "cure-demo.appspot.com",
+    messagingSenderId: "539892362374",
+    appId: "1:539892362374:web:125ab781bad923ebd5f507",
+    measurementId: "G-JZW9CHKH34"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  // firebase.analytics();
 @NgModule({
-  declarations: [
-    AppComponent,
-    // LoginPageComponent,
-    // RegisterComponent,
-    // ForgotDialogComponent,
-    // HomePageComponent,
-    // LogoHeaderComponent,
-    // AddProjectDialogComponent,
-    // AddContactDialogComponent,
-    // AddPhaseDialogComponent,
-    // EditContactDialogComponent,
-    // EditPhaseDialogComponent,
-    // EditProjectDialogComponent,
-    // IntroPageComponent,
-    // PreferencesDialogComponent,
-    DemoComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent, DemoComponent, HomeComponent, LoginComponent, SignupComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -69,18 +62,14 @@ import { HomeComponent } from './components/home/home.component';
     MatDialogModule,
     MDBBootstrapModule.forRoot(),
     MatSelectModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+
+    // firebase
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule // imports firebase/auth, only needed for auth features
   ],
-  entryComponents: [
-    // ForgotDialogComponent,
-    // AddProjectDialogComponent,
-    // AddContactDialogComponent,
-    // AddPhaseDialogComponent,
-    // EditContactDialogComponent,
-    // EditPhaseDialogComponent,
-    // EditProjectDialogComponent,
-    // PreferencesDialogComponent
-  ],
+  entryComponents: [],
   providers: [AppState],
   bootstrap: [AppComponent]
 })

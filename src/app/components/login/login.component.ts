@@ -1,0 +1,31 @@
+import { Component, OnInit } from '@angular/core';
+import * as firebase from 'firebase/app';
+import { Router } from '@angular/router';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
+})
+export class LoginComponent implements OnInit {
+
+  constructor(private router: Router,public afAuth: AngularFireAuthModule) { }
+  email:any
+  password:any
+  ngOnInit() {
+  }
+  login() {
+    this.email = document.getElementById("email").value;
+    this.password = document.getElementById("password").value;
+
+    firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
+      (user) => {
+   window.location.href=""
+      },
+      (err) => {
+        alert('Oops. ' + err.message)
+      }
+    );
+  }
+}
