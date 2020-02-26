@@ -21,7 +21,7 @@ export class SignupComponent implements OnInit {
     this.password = document.getElementById("password").value;
 
     // fun call
-    console.log(this.email,this.password);
+    console.log(this.email, this.password);
     firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
       (user) => {
         // this.router.navigate("home")

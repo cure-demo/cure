@@ -11,10 +11,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 export class LoginComponent implements OnInit {
 
   constructor(private router: Router, public afAuth: AngularFireAuthModule) { }
-  email: any;
+  email: string;
   password: any;
   ngOnInit() {
-    
   }
   login() {
     this.email = document.getElementById('email').value;
