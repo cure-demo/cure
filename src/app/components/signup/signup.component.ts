@@ -13,7 +13,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 export class SignupComponent implements OnInit {
   constructor( private router: Router,public afAuth: AngularFireAuthModule) {}
-  email:any
+  email:any;
   password:any
   ngOnInit() {}
   signup() {
