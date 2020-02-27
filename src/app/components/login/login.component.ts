@@ -16,10 +16,10 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   login() {
-    const emails = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    firebase.auth().signInWithEmailAndPassword(emails, password).then(
+    const emails = (<HTMLInputElement>document.getElementById('email')).value
+    const password = (<HTMLInputElement>document.getElementById('password')).value
+    
+firebase.auth().signInWithEmailAndPassword(emails, password).then(
       (user) => {
         window.location.href = 'home';
       },
