@@ -12,6 +12,6 @@ app.listen(process.env.PORT || 8080);
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/dist/index.html');
 });
-app.get('/login', function(req, res){
+app.get('*', function(req, res){
   res.sendFile(__dirname + '/dist/index.html');
 });
