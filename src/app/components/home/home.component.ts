@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from "@angular/forms";
 import { AdminService } from 'src/app/shared/services/admin.service';
+import * as firebase from "firebase/app";
+
 
 @Component({
   selector: 'app-home',
@@ -99,6 +101,15 @@ export class HomeComponent implements OnInit {
     };
     this.adminService.getckd(formValues).subscribe(data => {
       console.log(data.results.results);
+
+
+
+      var dbRef =firebase.database().ref("cure-demo")
+      var newDBRef = dbRef.push();
+      newDBRef.set({
+        name:"deepak",
+        email:"deepakbhangale1996@GMAIL.COM"
+      })
       if (data.results.results === 1) {
         document.getElementById('result_block').style.display = 'flex';
         document.getElementById('cdk_status').innerText = 'Found';

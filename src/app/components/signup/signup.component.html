@@ -1,8 +1,9 @@
 <div class="col-md-12 col-sm-12">
     <h3>Sign UP</h3>
-    <input type="email" class="" #email />
-    <input type="password" #password />
-    <button (click)="signup(email.value,password.value)">
+    <input type="email"  [(ngModel)]="email" placeholder="Email"/>
+    <input type="password" [(ngModel)]="password" placeholder="Enter password"/>
+    <input type="password" [(ngModel)]="confirm_password" placeholder="Re-enter Password"/>
+    <button (click)="signup()">
         SignUp
     </button>
 </div>
