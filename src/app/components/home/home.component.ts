@@ -1,19 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { FormBuilder } from "@angular/forms";
-import { AdminService } from 'src/app/shared/services/admin.service';
+import { AdminService } from "src/app/shared/services/admin.service";
 import * as firebase from "firebase/app";
+import { AngularFireDatabase } from 'angularfire2/database';
 
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
   age: any;
   demoForm: any;
 
-  constructor(private formBuilder: FormBuilder, private adminService: AdminService) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private adminService: AdminService,
+    private db: AngularFireDatabase
+  ) {}
 
   ngOnInit() {
     this.demoForm = this.formBuilder.group({
@@ -71,7 +76,6 @@ export class HomeComponent implements OnInit {
   }) {
     console.log(formValues);
 
-
     const payload = {
       age: 48,
       bp: 80,
@@ -97,39 +101,49 @@ export class HomeComponent implements OnInit {
       appet: 1,
       pe: 0,
       ane: 0
-
     };
+
+    // var config = {
+    //   apiKey: "AIzaSyB0O1KQS-yX_j1xfXxQGNtx5mPfaGlKzMA",
+    //   authDomain: "cure-demo.firebaseapp.com",
+    //   databaseURL: "https://cure-demo.firebaseio.com",
+    //   storageBucket: "cure-demo.appspot.com"
+    // };
+    // firebase.initializeApp(config);
+
     this.adminService.getckd(formValues).subscribe(data => {
       console.log(data.results.results);
 
+      // var dbRef = firebase.database().ref("cure-demo");
+      // var newDBRef = dbRef.push();
+      let sss ={
+        name: "deepak",
+        email: "deepakbhangale1996@GMAIL.COM"
+      }
+
+      const obj = this.db.database.ref('cure-demo/');
+      obj.push(sss);
 
 
-      var dbRef =firebase.database().ref("cure-demo")
-      var newDBRef = dbRef.push();
-      newDBRef.set({
-        name:"deepak",
-        email:"deepakbhangale1996@GMAIL.COM"
-      })
+
+
       if (data.results.results === 1) {
-        document.getElementById('result_block').style.display = 'flex';
-        document.getElementById('cdk_status').innerText = 'Found';
+        document.getElementById("result_block").style.display = "flex";
+        document.getElementById("cdk_status").innerText = "Found";
         window.scrollTo(0, document.body.scrollHeight);
-
       }
       if (data.results.results === 0) {
-        document.getElementById('result_block').style.display = 'flex';
-        document.getElementById('cdk_status').innerText = 'Not Found';
-        document.getElementById('cdk_status').style.color = 'green';
+        document.getElementById("result_block").style.display = "flex";
+        document.getElementById("cdk_status").innerText = "Not Found";
+        document.getElementById("cdk_status").style.color = "green";
         window.scrollTo(0, document.body.scrollHeight);
-
       }
     });
-
   }
   openModal(item) {
-    console.log('gg', item);
-    if (item === 'ckg') {
-      document.getElementById('cdk_block').style.display = 'flex';
+    console.log("gg", item);
+    if (item === "ckg") {
+      document.getElementById("cdk_block").style.display = "flex";
     }
   }
 }

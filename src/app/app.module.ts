@@ -30,6 +30,7 @@ import { environment } from "../environments/environment";
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import * as firebase from 'firebase/app';
+import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
 
  var firebaseConfig = {
     apiKey: "AIzaSyB0O1KQS-yX_j1xfXxQGNtx5mPfaGlKzMA",
@@ -67,7 +68,8 @@ import * as firebase from 'firebase/app';
     // firebase
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
-    AngularFireAuthModule // imports firebase/auth, only needed for auth features
+    AngularFireAuthModule ,// imports firebase/auth, only needed for auth features
+    AngularFireDatabaseModule
   ],
   entryComponents: [],
   providers: [AppState],
