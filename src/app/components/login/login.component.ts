@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import * as firebase from "firebase/app";
 import { Router } from "@angular/router";
 import { AngularFireAuthModule } from "@angular/fire/auth";
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: "app-login",
@@ -20,6 +21,7 @@ export class LoginComponent implements OnInit {
       .then(
         user => {
           window.location.href = "home";
+          this.router.navigateByUrl("home")
         },
         err => {
           alert("Oops. " + err.message);
